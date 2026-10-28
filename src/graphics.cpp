@@ -97,8 +97,9 @@ void Renderer::draw(Scene&s,const glm::mat4&view,const glm::mat4&proj,glm::vec3 
  surface.set("uTexture",0);surface.set("uShadow",1);surface.set("uLightCount",int(lights.size()));surface.set("uSkinned",0);surface.set("uInstanced",0);
  glActiveTexture(GL_TEXTURE1);glBindTexture(GL_TEXTURE_2D,shadowMap);glActiveTexture(GL_TEXTURE0);
  for(size_t i=0;i<lights.size();i++){std::string prefix="uLights["+std::to_string(i)+"].";const auto&l=lights[i];surface.set((prefix+"position").c_str(),l.position);surface.set((prefix+"color").c_str(),l.color);surface.set((prefix+"direction").c_str(),l.direction);surface.set((prefix+"power").c_str(),l.power);surface.set((prefix+"cutoff").c_str(),l.cutoff);surface.set((prefix+"outer").c_str(),l.outer);}
- for(auto&n:s.nodes){if(n.mesh<0||(n.character&&!security)||(n.screen&&security))continue;
- const auto&m=s.materials.at(n.material);surface.set("uModel",n.world);surface.set("uColor",m.color);surface.set("uSpecular",m.specular);surface.set("uShine",m.shine);surface.set("uEmission",m.emission);surface.set("uScreen",int(n.screen));
+ if(!s.skinPalette.empty())glUniformMatrix4fv(glGetUniformLocation(surface.id,"uBones[0]"),int(s.skinPalette.size()),GL_FALSE,glm::value_ptr(s.skinPalette[0]));
+ for(auto&n:s.nodes){if(n.mesh<0||(n.character&&!security)||(n.screen&&security))continue;surface.set("uSkinned",int(n.character));
+ const auto&m=s.materials.at(n.material);surface.set("uModel",n.character?s.characterModel:n.world);surface.set("uColor",alarm&&m.emission>0?glm::vec3(1,.008f,.002f):m.color);surface.set("uSpecular",m.specular);surface.set("uShine",m.shine);surface.set("uEmission",n.name=="DeskLampGlow"&&!s.lampOn?0.f:m.emission);surface.set("uScreen",int(n.screen));
  glBindTexture(GL_TEXTURE_2D,n.screen?cctv.color:(m.texture?m.texture:white));s.meshes.at(n.mesh)->draw();
  }
 }
@@ -112,7 +113,7 @@ void Renderer::frame(Scene&s,const glm::mat4&view,glm::vec3 eyePos,const std::ve
  glBindFramebuffer(GL_FRAMEBUFFER,cctv.fbo);glViewport(0,0,cctv.width,cctv.height);glClearColor(.025f,.035f,.05f,1);glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
  draw(s,securityView,glm::perspective(glm::radians(72.f),16.f/9.f,.08f,35.f),securityEye,lights,alarm,true);
  sceneTarget.resize(width,height,true);glBindFramebuffer(GL_FRAMEBUFFER,sceneTarget.fbo);glViewport(0,0,width,height);glClearColor(.018f,.025f,.045f,1);glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
- draw(s,view,glm::perspective(glm::radians(68.f),float(width)/height,.06f,50.f),eyePos,lights,alarm,false);
+ draw(s,view,glm::perspective(glm::radians(68.f),float(width)/height,.06f,50.f),eyePos,lights,alarm,characterPreview);
  glBindFramebuffer(GL_FRAMEBUFFER,0);glViewport(0,0,width,height);glDisable(GL_DEPTH_TEST);glDisable(GL_CULL_FACE);
  post.use();post.set("uScene",0);post.set("uTint",glm::vec3(1));glActiveTexture(GL_TEXTURE0);glBindTexture(GL_TEXTURE_2D,sceneTarget.color);glBindVertexArray(quad);glDrawArrays(GL_TRIANGLES,0,3);
 }

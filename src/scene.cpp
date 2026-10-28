@@ -10,12 +10,14 @@ void Scene::setLocal(const std::string&name,const glm::mat4&m){int i=find(name);
 void Scene::updateWorld(){for(size_t i=0;i<nodes.size();i++){auto&n=nodes[i];if(n.parent>=int(i))throw std::runtime_error("Scene parent order invalid");n.world=n.parent<0?n.local:nodes[n.parent].world*n.local;}}
 void Scene::buildBatches(){}
 void Scene::load(const fs::path&path){
+ const int meshOffset=int(meshes.size()),materialOffset=int(materials.size()),nodeOffset=int(nodes.size());
  std::ifstream file(path);if(!file)throw std::runtime_error("Missing scene manifest: "+path.string());
  std::string line;while(std::getline(file,line)){std::istringstream in(line);std::string type;in>>type;
  if(type.empty()||type[0]=='#')continue;
  if(type=="material"){Material m;std::string tex;in>>std::quoted(m.name)>>m.color.x>>m.color.y>>m.color.z>>m.specular>>m.shine>>m.emission>>std::quoted(tex);if(tex!="-")m.texture=loadTexture(path.parent_path()/tex);materials.push_back(m);}
  else if(type=="mesh"){std::string name,filename;in>>std::quoted(name)>>std::quoted(filename);meshes.push_back(Mesh::load(path.parent_path()/filename));}
- else if(type=="node"){Node n;int flags;in>>std::quoted(n.name)>>n.parent>>n.mesh>>n.material>>flags;n.dynamic=flags&1;n.screen=flags&2;n.character=flags&4;for(int c=0;c<4;c++)for(int r=0;r<4;r++)in>>n.local[c][r];n.base=n.local;index[n.name]=int(nodes.size());nodes.push_back(n);}
+ else if(type=="node"){Node n;int flags;in>>std::quoted(n.name)>>n.parent>>n.mesh>>n.material>>flags;n.dynamic=flags&1;n.screen=flags&2;n.character=flags&4;for(int c=0;c<4;c++)for(int r=0;r<4;r++)in>>n.local[c][r];if(n.mesh>=0)n.mesh+=meshOffset;n.material+=materialOffset;if(n.parent>=0)n.parent+=nodeOffset;
+ n.base=n.local;index[n.name]=int(nodes.size());nodes.push_back(n);}
  else throw std::runtime_error("Unknown scene record: "+type);
  if(!in)throw std::runtime_error("Malformed scene record: "+line);
  }if(materials.empty()||meshes.empty())throw std::runtime_error("Scene contains no renderable materials/meshes");updateWorld();

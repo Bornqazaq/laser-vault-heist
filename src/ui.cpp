@@ -7,7 +7,7 @@
 namespace lvh {
 void initUI(GLFWwindow*w){
  IMGUI_CHECKVERSION();ImGui::CreateContext();auto&io=ImGui::GetIO();io.IniFilename=nullptr;
- io.FontGlobalScale=1.30f;ImGui::StyleColorsDark();auto&style=ImGui::GetStyle();style.WindowRounding=9;style.FrameRounding=5;style.WindowPadding={20,16};
+ if(io.Fonts->AddFontFromFileTTF("assets/fonts/Karla-Regular.ttf",19.f)==nullptr)io.Fonts->AddFontDefault();io.FontGlobalScale=1.0f;ImGui::StyleColorsDark();auto&style=ImGui::GetStyle();style.WindowRounding=9;style.FrameRounding=5;style.WindowPadding={20,16};
  style.Colors[ImGuiCol_WindowBg]={.035f,.032f,.026f,.94f};style.Colors[ImGuiCol_Text]={.94f,.9f,.81f,1};style.Colors[ImGuiCol_Button]={.34f,.24f,.11f,1};
  ImGui_ImplGlfw_InitForOpenGL(w,true);ImGui_ImplOpenGL3_Init("#version 330");
 }
@@ -18,7 +18,7 @@ void drawUI(Game&g,float fps,int width,int height,const std::string&gpu,bool hel
  auto*dl=ImGui::GetForegroundDrawList();ImU32 ivory=IM_COL32(239,227,202,245),gold=IM_COL32(207,166,92,255);
  dl->AddRectFilled({24,24},{350,101},IM_COL32(10,12,12,195),5);dl->AddRectFilled({24,24},{27,101},gold);
  dl->AddText({43,37},gold,"LASER VAULT HEIST");dl->AddText({43,66},ivory,"Reach the vault. Leave no alarm.");
- char counter[64];snprintf(counter,64,"%.0f FPS  |  OPENGL",fps);
+ char counter[64];if(fps>0)snprintf(counter,64,"%.0f FPS  |  OPENGL",fps);else snprintf(counter,64,"MEASURING FPS");
  dl->AddRectFilled({float(width-240),24},{float(width-24),62},IM_COL32(10,12,12,195),5);dl->AddText({float(width-224),34},ivory,counter);
  if(g.state==State::Playing){
   float x=width*.5f,y=height*.5f;dl->AddCircleFilled({x,y},2,ivory);

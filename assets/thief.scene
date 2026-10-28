@@ -1,0 +1,155 @@
+# LVH character scene v1; vertices are in rig bind space
+material "LVH_Hoodie.003" 1 1 1 0.06 20 0 "textures/cloth.png"
+material "LVH_HoodBinding.003" 0.075 0.038 0.022 0.06 32 0 "-"
+material "LVH_Jacket.003" 1 1 1 0.065 24 0 "textures/leather.png"
+material "LVH_ZipMetal.003" 0.28 0.23 0.16 0.45 64 0 "-"
+material "LVH_Stitching.003" 0.24 0.14 0.08 0.08 32 0 "-"
+material "LVH_Skin.003" 0.56 0.34 0.23 0.045 24 0 "-"
+material "LVH_Jeans.003" 1 1 1 0.045 20 0 "textures/denim.png"
+material "LVH_ShoeRubber.003" 0.075 0.054 0.038 0.04 32 0 "-"
+material "LVH_Sneakers" 0.55 0.5 0.43 0.045 24 0 "textures/leather.png"
+material "LVH_Laces.003" 0.24 0.19 0.14 0.02 32 0 "-"
+material "LVH_EyeWhite.003" 0.6 0.56 0.47 0.3 48 0 "-"
+material "LVH_Iris.003" 0.06 0.035 0.018 0.3 48 0 "-"
+material "LVH_Brows.003" 0.045 0.022 0.014 0.02 32 0 "-"
+material "LVH_Lip.003" 0.24 0.095 0.065 0.08 32 0 "-"
+mesh "ZipHoodie" "meshes/thief_000.lvhm"
+mesh "HoodieWaist" "meshes/thief_001.lvhm"
+mesh "LeatherJacket" "meshes/thief_002.lvhm"
+mesh "ZipTrack" "meshes/thief_003.lvhm"
+mesh "ZipPull" "meshes/thief_004.lvhm"
+mesh "JacketCollarL" "meshes/thief_005.lvhm"
+mesh "JacketSleeveL" "meshes/thief_006.lvhm"
+mesh "HoodieCuffL" "meshes/thief_007.lvhm"
+mesh "SleeveSeamL" "meshes/thief_008.lvhm"
+mesh "PalmL" "meshes/thief_009.lvhm"
+mesh "FingerL0" "meshes/thief_010.lvhm"
+mesh "FingerL1" "meshes/thief_011.lvhm"
+mesh "FingerL2" "meshes/thief_012.lvhm"
+mesh "FingerL3" "meshes/thief_013.lvhm"
+mesh "ThumbL" "meshes/thief_014.lvhm"
+mesh "JeansLegL" "meshes/thief_015.lvhm"
+mesh "DenimSideSeamL" "meshes/thief_016.lvhm"
+mesh "ShoeSoleL" "meshes/thief_017.lvhm"
+mesh "SneakerL" "meshes/thief_018.lvhm"
+mesh "ShoelaceL0" "meshes/thief_019.lvhm"
+mesh "ShoelaceL1" "meshes/thief_020.lvhm"
+mesh "ShoelaceL2" "meshes/thief_021.lvhm"
+mesh "ShoelaceL3" "meshes/thief_022.lvhm"
+mesh "ShoelaceL4" "meshes/thief_023.lvhm"
+mesh "JacketPocketL" "meshes/thief_024.lvhm"
+mesh "JacketCollarR" "meshes/thief_025.lvhm"
+mesh "JacketSleeveR" "meshes/thief_026.lvhm"
+mesh "HoodieCuffR" "meshes/thief_027.lvhm"
+mesh "SleeveSeamR" "meshes/thief_028.lvhm"
+mesh "PalmR" "meshes/thief_029.lvhm"
+mesh "FingerR0" "meshes/thief_030.lvhm"
+mesh "FingerR1" "meshes/thief_031.lvhm"
+mesh "FingerR2" "meshes/thief_032.lvhm"
+mesh "FingerR3" "meshes/thief_033.lvhm"
+mesh "ThumbR" "meshes/thief_034.lvhm"
+mesh "JeansLegR" "meshes/thief_035.lvhm"
+mesh "DenimSideSeamR" "meshes/thief_036.lvhm"
+mesh "ShoeSoleR" "meshes/thief_037.lvhm"
+mesh "SneakerR" "meshes/thief_038.lvhm"
+mesh "ShoelaceR0" "meshes/thief_039.lvhm"
+mesh "ShoelaceR1" "meshes/thief_040.lvhm"
+mesh "ShoelaceR2" "meshes/thief_041.lvhm"
+mesh "ShoelaceR3" "meshes/thief_042.lvhm"
+mesh "ShoelaceR4" "meshes/thief_043.lvhm"
+mesh "JacketPocketR" "meshes/thief_044.lvhm"
+mesh "JeansSeat" "meshes/thief_045.lvhm"
+mesh "Neck" "meshes/thief_046.lvhm"
+mesh "Face" "meshes/thief_047.lvhm"
+mesh "NosePlanes" "meshes/thief_048.lvhm"
+mesh "Eye" "meshes/thief_049.lvhm"
+mesh "Iris" "meshes/thief_050.lvhm"
+mesh "Pupil" "meshes/thief_051.lvhm"
+mesh "Eyelid" "meshes/thief_052.lvhm"
+mesh "Eyelid.001" "meshes/thief_053.lvhm"
+mesh "Eyebrow" "meshes/thief_054.lvhm"
+mesh "Nostril" "meshes/thief_055.lvhm"
+mesh "Ear" "meshes/thief_056.lvhm"
+mesh "Eye.001" "meshes/thief_057.lvhm"
+mesh "Iris.001" "meshes/thief_058.lvhm"
+mesh "Pupil.001" "meshes/thief_059.lvhm"
+mesh "Eyelid.002" "meshes/thief_060.lvhm"
+mesh "Eyelid.003" "meshes/thief_061.lvhm"
+mesh "Eyebrow.001" "meshes/thief_062.lvhm"
+mesh "Nostril.001" "meshes/thief_063.lvhm"
+mesh "Ear.001" "meshes/thief_064.lvhm"
+mesh "MouthLine" "meshes/thief_065.lvhm"
+mesh "LowerLip" "meshes/thief_066.lvhm"
+mesh "HoodShell" "meshes/thief_067.lvhm"
+mesh "HoodBinding" "meshes/thief_068.lvhm"
+mesh "HoodBinding.001" "meshes/thief_069.lvhm"
+node "ZipHoodie" -1 0 0 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "HoodieWaist" -1 1 1 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "LeatherJacket" -1 2 2 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ZipTrack" -1 3 3 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ZipPull" -1 4 3 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JacketCollarL" -1 5 2 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JacketSleeveL" -1 6 2 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "HoodieCuffL" -1 7 1 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "SleeveSeamL" -1 8 4 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "PalmL" -1 9 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerL0" -1 10 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerL1" -1 11 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerL2" -1 12 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerL3" -1 13 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ThumbL" -1 14 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JeansLegL" -1 15 6 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "DenimSideSeamL" -1 16 4 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoeSoleL" -1 17 7 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "SneakerL" -1 18 8 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceL0" -1 19 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceL1" -1 20 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceL2" -1 21 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceL3" -1 22 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceL4" -1 23 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JacketPocketL" -1 24 4 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JacketCollarR" -1 25 2 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JacketSleeveR" -1 26 2 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "HoodieCuffR" -1 27 1 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "SleeveSeamR" -1 28 4 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "PalmR" -1 29 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerR0" -1 30 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerR1" -1 31 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerR2" -1 32 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "FingerR3" -1 33 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ThumbR" -1 34 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JeansLegR" -1 35 6 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "DenimSideSeamR" -1 36 4 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoeSoleR" -1 37 7 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "SneakerR" -1 38 8 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceR0" -1 39 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceR1" -1 40 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceR2" -1 41 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceR3" -1 42 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "ShoelaceR4" -1 43 9 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JacketPocketR" -1 44 4 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "JeansSeat" -1 45 6 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Neck" -1 46 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Face" -1 47 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "NosePlanes" -1 48 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eye" -1 49 10 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Iris" -1 50 11 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Pupil" -1 51 12 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eyelid" -1 52 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eyelid.001" -1 53 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eyebrow" -1 54 12 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Nostril" -1 55 13 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Ear" -1 56 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eye.001" -1 57 10 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Iris.001" -1 58 11 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Pupil.001" -1 59 12 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eyelid.002" -1 60 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eyelid.003" -1 61 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Eyebrow.001" -1 62 12 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Nostril.001" -1 63 13 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "Ear.001" -1 64 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "MouthLine" -1 65 13 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "LowerLip" -1 66 5 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "HoodShell" -1 67 0 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "HoodBinding" -1 68 1 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
+node "HoodBinding.001" -1 69 1 4 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0 0.0 0.0 0.0 0.0 1.0
