@@ -61,4 +61,3 @@ def leg_weights(side):
    t=max(0,min(1,(v.z-.85)/.13));return {'Pelvis':t,'Thigh.'+side:1-t}
   t=max(0,min(1,(v.z-.43)/.12));return {'Thigh.'+side:t,'Shin.'+side:1-t}
  return fn
-

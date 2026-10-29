@@ -24,4 +24,3 @@ for clip in ['Idle','Walk','CrouchIdle','CrouchWalk','Interact']:
 rig.data.pose_position=next(e.identifier for e in rig.data.bl_rna.properties['pose_position'].enum_items if e.identifier=='REST')
 (ROOT/'evidence'/'character-pose-bounds.json').write_text(json.dumps(result,indent=2))
 print(json.dumps(result))
-

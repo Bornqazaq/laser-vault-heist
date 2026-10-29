@@ -71,4 +71,3 @@ def build_face(skin,lip,brow,eye,iris,cloth,lining):
   for k in range(n+1):
    a=math.tau*k/n;points.append((.148*math.sin(a),-.146-.030*max(0,math.cos(a))**6+row*.008,1.674+.185*math.cos(a)+.025*max(0,math.cos(a))**12))
   tube('HoodBinding',points,[.007]*len(points),lining,constant('Head'),8)
-

@@ -46,4 +46,3 @@ for x,y in [(85,280),(185,325),(360,290),(440,375)]:
  d.polygon([(x,y-100),(x+34,y),(x-34,y)],fill=(43,59,43));d.rectangle((x-3,y,x+3,y+35),fill=(53,43,30))
 save(im,'landscape')
 print('Created',len(list(out.glob('*.png'))),'original textures')
-

@@ -36,4 +36,3 @@ void main(){
  result+=base*uEmission;
  fragColor=vec4(result,1.0);
 }
-

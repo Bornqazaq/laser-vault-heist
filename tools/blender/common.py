@@ -82,4 +82,3 @@ def face_mesh(name,verts,faces,mat,uvs=None,parent_obj=None):
    vi=mesh.loops[li].vertex_index;v=mesh.vertices[vi].co
    layer.data[li].uv=uvs[vi] if uvs else (v.x,v.z)
  return o
-

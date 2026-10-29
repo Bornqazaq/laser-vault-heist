@@ -54,4 +54,3 @@ def export(scene,output='vault.scene'):
   lines.append('node '+json.dumps(o.name)+f' {parent_index} {mi} {material} {flags} '+' '.join(f'{v:.7g}' for v in values))
  (out/output).write_text('\n'.join(lines)+'\n',encoding='utf-8')
  print('Exported',output,mesh_count,'meshes',len(ordered),'nodes')
-

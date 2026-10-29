@@ -10,4 +10,3 @@ void main(){
  if(uSkinned)skin=uBones[int(aJoints.x)]*aWeights.x+uBones[int(aJoints.y)]*aWeights.y+uBones[int(aJoints.z)]*aWeights.z+uBones[int(aJoints.w)]*aWeights.w;
  gl_Position=uLightVP*(uInstanced?aInstance:uModel)*skin*vec4(aPosition,1);
 }
-

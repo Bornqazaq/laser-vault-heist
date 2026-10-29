@@ -21,4 +21,3 @@ void main(){
  vUV=aUV; vShadow=uLightVP*p;
  gl_Position=uProjection*uView*p;
 }
-

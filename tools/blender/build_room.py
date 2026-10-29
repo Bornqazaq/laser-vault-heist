@@ -201,4 +201,3 @@ importlib.reload(export_scene);export_scene.export(scene)
 bpy.ops.file.pack_all()
 bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'art'/'blender'/'vault.blend'))
 print('Vault created:',len(scene.objects),'objects; editable source saved')
-

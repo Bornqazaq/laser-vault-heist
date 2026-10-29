@@ -13,4 +13,3 @@ void main(){
  float vignette=1.0-.20*pow(length((uv-.5)*1.25),2.0);
  color=vec4(mapped*vignette*uTint,1);
 }
-

@@ -9,4 +9,3 @@ if ($LASTEXITCODE -ne 0) { throw 'CMake configure failed' }
 & cmake --build (Join-Path $projectRoot 'build') --parallel 8
 if ($LASTEXITCODE -ne 0) { throw 'Build failed' }
 if ($Test) { & ctest --test-dir (Join-Path $projectRoot 'build') --output-on-failure; if ($LASTEXITCODE -ne 0) { throw 'Tests failed' } }
-

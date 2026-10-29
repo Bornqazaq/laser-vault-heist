@@ -57,4 +57,3 @@ def export(scene,rig,objects,clips):
  rig.data.pose_position=next(e.identifier for e in rig.data.bl_rna.properties['pose_position'].enum_items if e.identifier=='REST')
  (ROOT/'evidence'/'character-export.json').write_text(json.dumps({'triangles':total_triangles,'bones':len(bones),'clips':[c[0] for c in clips],'max_influences':4,'axis_conversion':'x,z,-y'},indent=2))
  print('Character export:',total_triangles,'triangles; normalized skin weights; five sampled clips')
-

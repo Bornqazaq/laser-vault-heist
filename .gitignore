@@ -10,3 +10,11 @@ __pycache__/
 *.pyc
 /deliverables/video/*.mp4
 
+
+evidence/research-metadata-raw.json
+evidence/frame-times.csv
+evidence/gameplay-trace.csv
+
+/dist/
+/.chart-data-*/
+/deliverables/report/*.docx

@@ -37,5 +37,24 @@
       "repository": "https://github.com/nothings/stb",
       "ref": "003501f6d7a8668ce8b6d875e34dd97ad0d5d5b5"
     }
-  ]
+  ],
+  "generated_loader": {
+    "generator": "glad2",
+    "version": "2.0.8",
+    "api": "gl:core=3.3",
+    "options": [
+      "loader",
+      "reproducible"
+    ],
+    "source": "https://github.com/Dav1dde/glad",
+    "license": "(CC0-1.0 OR WTFPL) AND Apache-2.0",
+    "header_sha256": "9c33599e63d43b8fcd13d4edbadbf146da9240537df6361de3ff0edcd6234375"
+  },
+  "font": {
+    "name": "Karla",
+    "source": "https://github.com/google/fonts/tree/main/ofl/karla",
+    "license": "OFL-1.1",
+    "sha256": "907c55a993e35b3ae4f3b8b8c28367f4b6d431df8e9ca6fbd382d8317dd3684e"
+  },
+  "vendor_trim": "Unused vendor docs, tests, examples and platform backends removed; compilation sources and license notices preserved. Clean build verified."
 }

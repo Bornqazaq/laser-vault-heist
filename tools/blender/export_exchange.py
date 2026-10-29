@@ -26,5 +26,3 @@ for scene_name,filename in [('LVH_Vault','vault.glb'),('LVH_Thief','thief.glb')]
   rig.animation_data.action=None
   rig.data.pose_position=next(e.identifier for e in rig.data.bl_rna.properties['pose_position'].enum_items if e.identifier=='REST')
  print('Exchange export:',filename,(out/filename).stat().st_size,'bytes')
-
-

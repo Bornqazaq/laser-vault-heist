@@ -90,4 +90,3 @@ import export_character
 importlib.reload(export_character);export_character.export(scene,rig,meshes,clips)
 bpy.ops.file.pack_all();bpy.ops.wm.save_as_mainfile(filepath=str(ROOT/'art'/'blender'/'thief.blend'))
 print('Thief created:',len(meshes),'mesh pieces;',len(rig.data.bones),'bones;',len(clips),'clips')
-

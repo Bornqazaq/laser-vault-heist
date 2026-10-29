@@ -56,4 +56,3 @@ for name in ('stb_image.h','stb_image_write.h','LICENSE'):
 results['sources'].append({'name':'stb','repository':'https://github.com/nothings/stb','ref':sha})
 (ROOT/'docs'/'dependency-lock.json').write_text(json.dumps(results,indent=2),encoding='utf-8')
 print('Bootstrap finished',flush=True)
-

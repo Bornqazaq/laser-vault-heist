@@ -63,4 +63,3 @@ def animate(rig):
   action['duration_frames']=length;action['lvh_source']='LaserVaultHeist'
  rig.animation_data.action=None;pose(rig,'Idle',0)
  return clips
-
