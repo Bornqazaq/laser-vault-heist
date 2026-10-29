@@ -1,4 +1,6 @@
 #version 330 core
+// Fitted curve: Krzysztof Narkowicz (2016), CC0. See LICENSES/Tone-mapping.txt.
+// https://knarkowicz.wordpress.com/2016/01/06/aces-filmic-tone-mapping-curve/
 in vec2 uv;out vec4 color;uniform sampler2D uScene;uniform vec3 uTint;
 void main(){
  vec3 hdr=texture(uScene,uv).rgb;

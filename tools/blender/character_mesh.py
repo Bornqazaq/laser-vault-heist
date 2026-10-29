@@ -55,6 +55,8 @@ def arm_weights(side):
  return fn
 def leg_weights(side):
  def fn(v):
+  if v.z<.25:
+   t=max(0,min(1,(v.z-.14)/.11));return {'Foot.'+side:1-t,'Shin.'+side:t}
   if v.z>.85:
    t=max(0,min(1,(v.z-.85)/.13));return {'Pelvis':t,'Thigh.'+side:1-t}
   t=max(0,min(1,(v.z-.43)/.12));return {'Thigh.'+side:t,'Shin.'+side:1-t}

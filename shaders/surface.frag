@@ -11,7 +11,7 @@ float shadow(){
  if(q.z>1.0||q.x<0.0||q.x>1.0||q.y<0.0||q.y>1.0)return 0.0;
  vec2 size=1.0/vec2(textureSize(uShadow,0)); float value=0.0;
  for(int x=-1;x<=1;x++)for(int y=-1;y<=1;y++)
- value+=q.z-.002>texture(uShadow,q.xy+vec2(x,y)*size).r?1.0:0.0;
+ value+=q.z-.0007>texture(uShadow,q.xy+vec2(x,y)*size).r?1.0:0.0;
  return value/9.0;
 }
 void main(){
@@ -21,7 +21,7 @@ void main(){
  vec3 ambient=uAlarm?vec3(.15,.018,.012):vec3(.095,.082,.067);
  vec3 result=base*ambient;
  vec3 moon=uAlarm?vec3(.12,.008,.004):vec3(.19,.28,.46);
- result+=base*moon*max(dot(N,normalize(vec3(-.6,1,.3))),0.0)*(1.0-.8*shadow());
+ result+=base*moon*max(dot(N,normalize(vec3(-.75,.45,.4))),0.0)*(1.0-.8*shadow());
  for(int i=0;i<8;i++){
  if(i>=uLightCount)break;
  vec3 delta=uLights[i].position-vWorld;

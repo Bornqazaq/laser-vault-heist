@@ -86,7 +86,7 @@ for z in [.84,1.05,1.28]:cube('ChairBackSlat',(-2.66,.73,z),(.61,.07,.14),wood,.
 cyl('DeskLampFoot',(-2.85,1.97,.94),.18,.045,brass)
 rod('DeskLampStem',(-2.85,1.97,.95),(-2.85,1.97,1.31),.025,brass)
 cyl('DeskLampShade',(-2.85,1.97,1.4),.25,.22,edge,24,radius2=.11)
-cyl('DeskLampGlow',(-2.85,1.97,1.29),.215,.015,lampmat,24)
+cyl('DeskLampGlow',(-2.85,1.97,1.29),.215,.015,lampmat,24)['dynamic']=True
 cube('MonitorCase',(-2.78,3.30,1.23),(.70,.52,.57),edge,.06)
 cube('MonitorStand',(-2.78,3.35,.94),(.36,.33,.12),black,.02)
 cube('MonitorBezel',(-2.78,3.025,1.25),(.65,.045,.49),black,.025)
@@ -120,7 +120,8 @@ cyl('WheelHub',(0,0,0),.10,.20,brass,24,wheel,(math.pi/2,0,0))
 for i in range(6):
  a=i*math.tau/6;rod('WheelSpoke',(0,0,0),(.40*math.cos(a),0,.40*math.sin(a)),.027,brass,wheel)
 for i,z in enumerate([.45,1.36,2.27]):
- cube('SafeBolt'+str(i),(2.68,.05,z),(.25,.16,.14),brass,.015,pivot)
+ bolt=cube('SafeBolt'+str(i),(2.68,.05,z),(.25,.16,.14),brass,.015,pivot)
+ bolt.keyframe_insert('location',frame=13);bolt.location.x-=.22;bolt.keyframe_insert('location',frame=28)
  cyl('SafeHinge',(-1.53,11.04,z+.3),.11,.36,brass,20)
 # Wall sconces with visible supports and warm glass.
 for side,y in [(-1,5),(1,4),(-1,10.6),(1,10.6)]:
@@ -139,12 +140,13 @@ for i,x in enumerate([-2.2,2.2]):
  for dx in [-.22,.22]:cube('SpotBracket',(dx,0,-.18),(.07,.15,.30),edge,.015,p)
  cyl('SpotHousing',(0,.06,-.22),.19,.32,metal,24,p,(.335,0,0))
  cyl('SpotLens',(0,.113,-.38),.165,.015,lampmat,24,p,(.335,0,0))
- p.rotation_euler.z=-.5;p.keyframe_insert('rotation_euler',frame=1);p.rotation_euler.z=.5;p.keyframe_insert('rotation_euler',frame=81);p.rotation_euler.z=-.5;p.keyframe_insert('rotation_euler',frame=161)
+ for frame,angle in [(1,0),(41,.65),(81,0),(121,-.65),(161,0)]:
+  p.rotation_euler.z=angle;p.keyframe_insert('rotation_euler',frame=frame)
  p.rotation_euler.z=0
- l=light('GuardSpot'+str(i),(x,6.63,3.17),(1,.64,.3),500,'SPOT');l.rotation_euler=(.335,0,0);l.data.spot_size=.85;l.data.spot_blend=.35
+ l=light('GuardSpot'+str(i),(0,.13,-.43),(1,.64,.3),500,'SPOT');l.parent=p;l.rotation_euler=(.335,0,0);l.data.spot_size=.85;l.data.spot_blend=.35
 # Emitters and the exact collision boxes share the same beam transforms.
 for i,y in enumerate([2.9,4.2,5.6,6.9,8.15,9.5]):
- height=1.23 if i==5 else 1.35
+ height=1.42 if i==5 else 1.35
  for side in [-1,1]:
   mount=empty('EmitterRoot'+str(i)+'_'+str(side),(side*3.65,y,height));mount['dynamic']=True
   cube('EmitterRail',(side*3.86,y,1.95),(.06,.12,3.25),edge,.012)
@@ -152,7 +154,7 @@ for i,y in enumerate([2.9,4.2,5.6,6.9,8.15,9.5]):
   cyl('LaserEmitter',(side*.03,0,0),.075,.14,black,16,mount,(0,math.pi/2,0))
   cyl('EmitterLens',(-side*.05,0,0),.039,.012,red,16,mount,(0,math.pi/2,0))
  beam=cube('Laser'+str(i),(0,y,height),(1,1,1),red,0);beam['dynamic']=True
- beam.scale=(7.3,.052,.052)
+ beam.scale=(7.3,.024,.024)
 # Faceted plants with curved leaves, rather than intersecting solid cones.
 def plant(loc,scale):
  x,y,z=loc
